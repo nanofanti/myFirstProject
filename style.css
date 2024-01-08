@@ -58,6 +58,12 @@ a:visited {
   color: black;
 }
 
+a:hover {
+  transition-property: color;
+  background-color: yellow;
+  transition-delay: 0.5s;
+}
+
 header {
   width: 1440px;
   height: 292px;
@@ -68,11 +74,22 @@ header {
   justify-content: center;
   align-items: center;
   margin-left: 10px;
+  text-transform: capitalize;
 }
 
 h1 {
   font-size: 40px;
   margin-bottom: 10px;
+  animation: unblur 3s 1s 2;
+}
+
+@keyframes unblur {
+  from {
+    text-shadow: 0 0 8px yellow;
+  }
+  to {
+    text-shadow: 0;
+  }
 }
 
 #p__h1 {
@@ -90,6 +107,7 @@ h1 {
   gap: 100px;
   margin-bottom: 10px;
   margin-left: 10px;
+  text-transform: capitalize;
 }
 
 .text {
@@ -120,6 +138,7 @@ h1 {
 h2 {
   text-align: center;
   font-size: 30px;
+  animation: unblur 3s 1s 2;
 }
 
 .grid-container {
@@ -177,6 +196,12 @@ button {
   width: 132px;
   height: 51px;
   border-radius: 20px;
+}
+
+#transition__color:hover {
+  transition-property: color;
+  transition-delay: 0.5s;
+  background-color: yellow;
 }
 
 #author {
